@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 from flask import Flask, render_template, request
 
 load_dotenv()  # load env vars from .env file
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.api_key = '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'
 
 app = Flask(__name__)
 
@@ -28,4 +29,5 @@ def get_response():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=9090)
